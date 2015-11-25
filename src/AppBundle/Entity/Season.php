@@ -41,7 +41,12 @@ class Season
      * @ORM\Column(name="year", type="integer")
      */
     private $year;
-
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Serie")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $serie;
 
     /**
      * Get id
@@ -124,5 +129,28 @@ class Season
     {
         return $this->year;
     }
-}
 
+    /**
+     * Set serie
+     *
+     * @param \AppBundle\Entity\Serie $serie
+     *
+     * @return Season
+     */
+    public function setSerie(\AppBundle\Entity\Serie $serie)
+    {
+        $this->serie = $serie;
+
+        return $this;
+    }
+
+    /**
+     * Get serie
+     *
+     * @return \AppBundle\Entity\Serie
+     */
+    public function getSerie()
+    {
+        return $this->serie;
+    }
+}

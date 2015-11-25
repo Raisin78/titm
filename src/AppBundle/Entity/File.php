@@ -63,6 +63,10 @@ class File
      */
     private $date;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Episode")
+     */
+    private $episode;
 
     /**
      * Get id
@@ -217,5 +221,28 @@ class File
     {
         return $this->date;
     }
-}
 
+    /**
+     * Set episode
+     *
+     * @param \AppBundle\Entity\Episode $episode
+     *
+     * @return File
+     */
+    public function setEpisode(\AppBundle\Entity\Episode $episode = null)
+    {
+        $this->episode = $episode;
+
+        return $this;
+    }
+
+    /**
+     * Get episode
+     *
+     * @return \AppBundle\Entity\Episode
+     */
+    public function getEpisode()
+    {
+        return $this->episode;
+    }
+}

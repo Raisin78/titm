@@ -125,4 +125,3 @@ class Serie
         return $this->year;
     }
 }
-
