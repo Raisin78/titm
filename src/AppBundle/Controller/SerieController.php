@@ -11,11 +11,26 @@ use AppBundle\Form\SerieType;
 class SerieController extends Controller
 {
     /**
-     * @Route("/serie/{id}", name="serie_index")
+     * @Route("/serie/{id}", 
+     * name="serie_index",
+     * requirements = { "id": "\d+"}
+     * )
      */
-    public function indexAction(Request $request)
+    public function indexAction(Request $request, $id)
     {
-     return $this->render('Serie/view.html.twig');
+     
+     $em = $this->getDoctrine()->getManager();
+     $repo = $em->getRepository('AppBundle\Entity\Serie');
+     
+     $serie = $repo->find($id);
+     
+     if($serie === null) {
+      throw new NotFoundHttpException("La serie que vous recherchez n'existe pas.");
+     }
+     
+     return $this->render('Serie/view.html.twig',
+         [ 'serie' => $serie ]
+     );
     }
     
     /**
@@ -35,8 +50,7 @@ class SerieController extends Controller
            $em->flush();
            
            $request->getSession()->getFlashBag()->add('notice', 'Serie correctement enregistrée');
-            
-            return $this->redirect($this->generateUrl('serie_index', ['id' => $serie->getId()]));
+           return $this->redirect($this->generateUrl('serie_index', ['id' => $serie->getId()]));
        } 
        
        return $this->render(
