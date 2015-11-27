@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title> The It Mates</title>
+    
+  {% block stylesheets %}  
+    <link href="/Symfony/web/css/bootstrap.css" rel="stylesheet">
+    <link href="/Symfony/web/css/myTheme.css" rel="stylesheet">
+  {% endblock %}
+  
+</head>
+
+    
+<body>
+{% block header %}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <ul class="nav navbar-nav">
+      <span class="navbar-brand"> The IT Mates</span>
+      <li class="active"> <a href="#">Series</a> </li>
+      <li> <a href="#">Films</a> </li>
+      <li> <a href="#">Logiciels</a> </li>
+      <li> <a href="#">Livres</a> </li>
+      <li> <a href="#">Autres</a> </li>
+    </ul>
+    
+     <ul class="nav navbar-nav navbar-right">
+      <li> <a href="#">Transmission</a> </li>
+      <li> <a href="#">Mon Compte</a> </li>
+    </ul>
+    
+  </div>
+</nav>
+{% endblock %}
+
+<div class="content">
+  {% block content %}
+  {% endblock %}
+</div>
+
+{% block footer %}
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">The IT Mates Corp</p>
+      </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+{% endblock %}
+</body>
+
 </html>

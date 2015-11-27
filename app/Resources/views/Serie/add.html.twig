@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<div class="col-sm-6">
+{{ form_start(form) }}
+  {# Name #}
+  <div class="form-group">
+    {{ form_errors(form.name) }}
+    {{ form_label(form.name) }}
+    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+  </div>
+  
+  {# Type #}  
+  <div class="form-group">
+    {{ form_errors(form.type) }}
+    {{ form_label(form.type) }}
+    {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+  </div>  
+  
+   {# Year #}
+  <div class="form-group">
+    {{ form_errors(form.year) }}
+    {{ form_label(form.year) }}
+    {{ form_widget(form.year, {'attr': {'class': 'form-control'}}) }}
+  </div>
+
+{{ form_end(form) }}
+
+
+</div>
+
+{% endblock %}

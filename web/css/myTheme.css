@@ -1,0 +1,22 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.content {
+   margin-left:40px; 
+}
+
+body {
+
+  margin-bottom: 60px; //Pour le footer
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: rgb(84,50,72);
+}

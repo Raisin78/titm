@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Asserts;
 /**
  * Serie
  *
@@ -24,14 +24,28 @@ class Serie
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=50)
+     * @Asserts\NotBlank()
+     * @Asserts\Length(
+     *      min = 2,
+     *      max = 30,
+     *      minMessage = "La nom de la serie doit au moins posseder {{ limit }} characteres !",
+     *      maxMessage = "La nom de la serie ne peut pas exceder {{ limit }} characteres !"
+     * )
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=255)
+     * @ORM\Column(name="type", type="string", length=50)
+     * @Asserts\NotBlank()
+     * @Asserts\Length(
+     *      min = 2,
+     *      max = 30,
+     *      minMessage = "La type de la serie doit au moins posseder {{ limit }} characteres !",
+     *      maxMessage = "La type de la serie ne peut pas exceder {{ limit }} characteres !"
+     * )
      */
     private $type;
 
@@ -39,6 +53,12 @@ class Serie
      * @var integer
      *
      * @ORM\Column(name="year", type="integer")
+     * @Asserts\Range(
+     *      min = 1980,
+     *      max = 2030,
+     *      minMessage = "Année minimum : {{ limit }} !",
+     *      maxMessage = "Année maximum : {{ limit }} !",
+     * )
      */
     private $year;
 

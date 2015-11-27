@@ -1,0 +1,20 @@
+[25-Nov-2015 14:56:36 UTC] PHP Fatal error:  Class 'AppBundle\Controller\SerieType' not found in /home/ubuntu/workspace/Symfony/src/AppBundle/Controller/SerieController.php on line 26
+[25-Nov-2015 14:56:36 UTC] PHP Stack trace:
+[25-Nov-2015 14:56:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[25-Nov-2015 14:56:36 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /home/ubuntu/workspace/Symfony/web/app_dev.php:20
+[25-Nov-2015 14:56:36 UTC] PHP   3. Symfony\Component\HttpKernel\DependencyInjection\ContainerAwareHttpKernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:2444
+[25-Nov-2015 14:56:36 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3222
+[25-Nov-2015 14:56:36 UTC] PHP   5. Symfony\Component\HttpKernel\HttpKernel->handleRaw($request = *uninitialized*, $type = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3071
+[25-Nov-2015 14:56:36 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3109}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3109
+[25-Nov-2015 14:56:36 UTC] PHP   7. AppBundle\Controller\SerieController->addAction($request = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3109
+[26-Nov-2015 14:07:53 UTC] PHP Parse error:  syntax error, unexpected 'data_class' (T_STRING) in /home/ubuntu/workspace/Symfony/src/AppBundle/Form/SerieType.php on line 29
+[26-Nov-2015 14:07:53 UTC] PHP Stack trace:
+[26-Nov-2015 14:07:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/Symfony/web/app_dev.php:0
+[26-Nov-2015 14:07:53 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /home/ubuntu/workspace/Symfony/web/app_dev.php:20
+[26-Nov-2015 14:07:53 UTC] PHP   3. Symfony\Component\HttpKernel\DependencyInjection\ContainerAwareHttpKernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:2444
+[26-Nov-2015 14:07:53 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3222
+[26-Nov-2015 14:07:53 UTC] PHP   5. Symfony\Component\HttpKernel\HttpKernel->handleRaw($request = *uninitialized*, $type = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3071
+[26-Nov-2015 14:07:53 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3109}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3109
+[26-Nov-2015 14:07:53 UTC] PHP   7. AppBundle\Controller\SerieController->addAction($request = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:3109
+[26-Nov-2015 14:07:53 UTC] PHP   8. spl_autoload_call(*uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:27
+[26-Nov-2015 14:07:53 UTC] PHP   9. Symfony\Component\Debug\DebugClassLoader->loadClass($class = *uninitialized*) /home/ubuntu/workspace/Symfony/app/bootstrap.php.cache:27
